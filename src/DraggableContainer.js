@@ -26,7 +26,7 @@ export default class DraggableContainer extends React.Component {
   static defaultProps = {
     Container: 'div',
     style: {},
-    directions: ['tt', 'bb', 'll', 'rr', 'tb', 'lr' ],
+    directions: ['tt', 'bb', 'll', 'rr', 'tb', 'lr', 'xlr', 'xrl', 'ytb', 'ybt' ],
     threshold: 5,
     className: '',
     activeClassName: 'active',
@@ -158,8 +158,8 @@ export default class DraggableContainer extends React.Component {
     const results = {}
 
     const directions = {
-      x: ['ll', 'rr', 'lr'],
-      y: ['tt', 'bb', 'tb'],
+      x: ['ll', 'rr', 'lr', 'xlr', 'xrl'],
+      y: ['tt', 'bb', 'tb', 'ytb', 'ybt'],
     }
 
     // filter unnecessary directions
@@ -238,6 +238,22 @@ export default class DraggableContainer extends React.Component {
       case 'tb':
         result.dist = y + H / 2 - tb
         result.value = tb
+        break
+      case 'xlr':
+        result.dist = (x + W) - l
+        result.value = l
+        break
+      case 'xrl':
+        result.dist = x - r
+        result.value = r
+        break
+      case 'ytb':
+        result.dist = (y + H) - t
+        result.value = t
+        break
+      case 'ybt':
+        result.dist = y - b
+        result.value = b
         break
     }
 
