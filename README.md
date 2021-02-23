@@ -68,7 +68,7 @@ ReactDOM.render(<Example />, container)
 | :-- | :-- | :-- | :-- |
 | Container | String/Element | 'div' | The `DraggableContainer` will be rendered as a HTML tag or the React Component you specify |
 | threshold | Number | 5 | The max distance of between others and the dragging element triggering magnetic adsorption |
-| directions | Array | ['tt', 'bb', 'll', 'rr', 'tb', 'lr' ] | The directions you want. `tt` indicate the guide line will show when a element aligned with the top of the dragging element. |
+| directions | Array | ['tt', 'bb', 'll', 'rr', 'tb', 'lr', 'xlr', 'xrl', 'ytb', 'ybt' ] | The directions you want. `tt` indicate the guide line will show when a element aligned with the top of the dragging element. |
 | activeClassName | String | 'active' | if you want to add class name for the element aligned with one you drag, use it.|
 | lineStyle | Object | {} | You can customize the style of auxiliary line by this option |
 | limit | String | true | Whether to restricts movement within the container |
